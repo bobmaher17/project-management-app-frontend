@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer components {
+    /* Table cells */
+    .th-cell {
+    @apply px-6 py-6 text-left text-sm font-semibold text-gray-900 cursor-pointer select-none;
+    }
+
+    .td-cell {
+    @apply px-6 py-2 whitespace-nowrap text-sm text-blue-700;
+    }
+
+    /* Filter controls */
+    .filter-group {
+    @apply flex flex-col;
+    }
+
+    .filter-label {
+    @apply mb-1 text-sm font-medium text-gray-700;
+    }
+
+    .filter-select {
+    @apply w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm
+            focus:outline-none focus:ring-blue-500 focus:border-blue-500;
+    }
+
+    .filter-input { @apply w-full border border-gray-300 rounded-lg py-2 px-4 text-sm; }
+    .pagination-btn { @apply p-2 border rounded-md disabled:opacity-50 hover:bg-slate-100; }
+
+    .status-badge {
+    @apply px-3 py-1 inline-flex text-xs leading-5 font-bold rounded-full;
+    }
+    .status-active { @apply bg-emerald-100 text-emerald-800; }
+    .status-inactive { @apply bg-slate-100 text-slate-800; }
+    .status-live { @apply bg-blue-100 text-blue-800; }
+    .status-closed { @apply bg-slate-100 text-slate-800; }
+    .status-in-progress { @apply bg-amber-100 text-amber-800; }
+    .status-not-yet { @apply bg-red-100 text-red-800; }
+    .status-create { @apply bg-blue-100 text-blue-800; }
+    .status-update { @apply bg-amber-100 text-amber-800; }
+    .status-delete { @apply bg-red-100 text-red-800; }
+    .status-login { @apply bg-emerald-100 text-emerald-800; }
+
+    .form-group label { @apply block mb-1 text-sm font-medium text-slate-700; }
+    .btn-primary { @apply px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700; }
+    .btn-secondary { @apply px-5 py-2.5 bg-white text-slate-800 font-semibold rounded-lg border border-slate-300 hover:bg-slate-100; }
+    .btn-danger { @apply px-5 py-2.5 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700; }
+
+
+    .form-group {
+    @apply flex flex-col gap-2;
+    }
+    .form-label {
+    @apply block text-sm font-semibold text-slate-700;
+    }
+    .form-input {
+    @apply block w-full rounded-lg border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 text-sm p-3;
+    }
+    .custom-range {
+    @apply h-2 w-full cursor-pointer appearance-none rounded-lg bg-slate-200;
+    }
+    .custom-range::-webkit-slider-thumb {
+    @apply h-5 w-5 cursor-pointer appearance-none rounded-full bg-blue-600;
+    }
+    .custom-range::-moz-range-thumb {
+    @apply h-5 w-5 cursor-pointer appearance-none rounded-full bg-blue-600 border-none;
+    }
+
+    .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+}
